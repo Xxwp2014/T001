@@ -11,7 +11,7 @@
 	{"name":"MyTV","type":0,"url":"https://tv.iill.top/m3u/MyTV","ua":"okhttp/3.15","playerType":2},
 	    
 
-		  {
+	{
             "name": "①猫TV线路",
             "type": 0,
             "url": "http://rihou.cc:555/gggg.nzk",
@@ -160,24 +160,6 @@
             "name": "⑤②虎牙线路",
             "type": 0,
             "url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/huyayqk.m3u",
-            "playerType": 2,
-            "ua": "okhttp/3.15",
-            "epg": "https://epg.112114.eu.org/?ch={name}&date={date}",
-            "logo": "https://epg.112114.eu.org/logo/{name}.png"
-        },
-        {
-            "name": "⑤③斗鱼专线",
-            "type": 0,
-            "url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/YanG-1989/m3u/main/yu.m3u",
-            "playerType": 2,
-            "ua": "okhttp/3.15",
-            "epg": "https://epg.112114.eu.org/?ch={name}&date={date}",
-            "logo": "https://epg.112114.eu.org/logo/{name}.png"
-        },
-        {
-            "name": "⑤④虎牙专线",
-            "type": 0,
-            "url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/YanG-1989/m3u/main/ya.m3u",
             "playerType": 2,
             "ua": "okhttp/3.15",
             "epg": "https://epg.112114.eu.org/?ch={name}&date={date}",
