@@ -6,6 +6,11 @@
         {"name":"IPV6①","type":0,"url":"https://github.moeyy.xyz/https://github.com/fanmingming/live/raw/refs/heads/main/tv/m3u/ipv6.m3u","playerType":1},
         {"name":"IPV6②","type":0,"url":"https://github.moeyy.xyz/https://raw.githubusercontent.com/wwb521/live/main/tv.m3u","playerType":1,"logo":"https://live.fanmingming.com/tv/{name}.png"},
         {"name":"平台直播","type":0,"url":"https://tv.iill.top/m3u/Live","ua":"okhttp/3.15","playerType":2},
+	{"name":"电视直播","type":0,"url":"https://tv.iill.top/m3u/Gather","ua":"okhttp/3.15","playerType":2},
+	{"name":"体育直播","type":0,"url":"https://tv.iill.top/m3u/Sport","ua":"okhttp/3.15","playerType":2},
+	{"name":"MyTV","type":0,"url":"https://tv.iill.top/m3u/MyTV","ua":"okhttp/3.15","playerType":2},
+	    
+
 		  {
             "name": "①猫TV线路",
             "type": 0,
