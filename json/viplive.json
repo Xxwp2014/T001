@@ -9,7 +9,7 @@
 	{"name":"电视直播","type":0,"url":"https://tv.iill.top/m3u/Gather","ua":"okhttp/3.15","playerType":2},
 	{"name":"体育直播","type":0,"url":"https://tv.iill.top/m3u/Sport","ua":"okhttp/3.15","playerType":2},
 	{"name":"MyTV","type":0,"url":"https://tv.iill.top/m3u/MyTV","ua":"okhttp/3.15","playerType":2},
-	    
+	{"name":"M1","type":0,"url":"http://www.lyyytv.cn/yt/zhibo/1.txt","ua":"okhttp/3.15","playerType":2},
 
 	{
             "name": "①猫TV线路",
@@ -228,6 +228,7 @@
         {"key":"YiSo","name":"易搜","type":3,"api":"csp_YiSo","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
         {"key":"PanSearch","name":"盘Se","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
         {"key":"push_agent","name":"手机推送","type":3,"api":"csp_Push","searchable":0,"quickSearch":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}}
+        {"key": "测试","name": "BA测试","type": 1,"api": "https://z.watano.top/exec/Api01?render=false&test=1&type=main&","playUrl": "https://z.watano.top/exec/Api01?render=false&test=1&type=play&","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": [  "A",  "B",  "C"]}
       ],
     "parses":[
         {"name":"Web聚合","type":3,"url":"Web"},
