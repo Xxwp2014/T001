@@ -5,7 +5,7 @@ var rule = {
 	homeUrl:'/corsproxy/?apiurl=https://tedy.cc',
 	url: '/corsproxy/?apiurl=https://tedy.cc/tedy/fyclass-fypage',
 	//homeUrl:'https://api.web.360kan.com/v1/rank?cat=2&size=9',
-    //detailUrl:'https://api.web.360kan.com/v1/detail?cat=fyclass&id=fyid',
+       detailUrl:'/corsproxy/?apiurl=https://tedy.cc/fyid',
     //searchUrl:'https://api.so.360kan.com/index?force_v=1&kw=**&from=&pageno=fypage&v_ap=1&tab=all',
     //url:'https://api.web.360kan.com/v1/filter/list?catid=fyclass&rank=rankhot&cat=&year=&area=&act=&size=35&pageno=fypage&callback=',
 	
