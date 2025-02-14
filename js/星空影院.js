@@ -21,29 +21,25 @@ var rule = {
 	play_parse:true,
 	//class_parse:'#menus&&li:gt(1);a&&Text;a&&href;.*/(.*)/',
 	lazy:`js:
-		post("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy1&in=",{"body":{"input":input,"TABS":TABS,"data":playObj}});
 		if(input.indexOf("/teplay/")>-1){
 			var linkIndex=1;
 			if(TABS &&  playObj ){
-				linkIndex=TABS.indexOf(playObj["flag"]);
+				linkIndex=TABS.indexOf(playObj["flag"])+1;
 			}
 			if(linkIndex<1)linkIndex=1;
 			var vids=input.split("/teplay/")[1].replaceAll("/","").split("-");
-			
 			input="https://corsproxy.bunkum.us/corsproxy/?apiurl=https://tedy.cc/teplay/"+vids[0]+"-"+linkIndex;
 			if(vids.length>2)input=input+"-"+vids[2];
 			var _html=request(input);
 			var a=_html.substring(_html.indexOf("player_aaaa"));
 			a=a.substring(12,a.indexOf("</script>"));
 			a=JSON.parse(a)
-			post("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy3&in=",{"body":{"input":input,"A":a}});
 			input={
                 parse:1,
                 jx:0,
                 url:a.url
             };
 		} 
-		post("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy4&in=",{"body":{"input":input,"data":playObj}});
 	`,
 	limit:6,
 	推荐: '.main&&.tuijian-banner&&li;a&&title;img&&data-original;.lzbz&&Text;.other&&Text',
