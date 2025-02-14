@@ -1,3 +1,4 @@
+
 var rule = {
 	title:'星空影院',
 	host:'https://tedy.cc',
@@ -24,6 +25,8 @@ var rule = {
 	limit:6,
 	推荐: `js:
 		request("https://z.watano.top/exec/Api01?render=false&test=1&type=推荐&in="+input);
+		let hh=request(input);
+		request("https://z.watano.top/exec/Api01?render=false&test=1&type=推荐&hh="+(hh.replace(/[\n\r]+/g, '')));
 	`,
 	一级x:`js:
 		request("https://z.watano.top/exec/Api01?render=false&test=1&type=一级&in="+input);
