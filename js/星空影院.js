@@ -15,22 +15,28 @@ var rule = {
 	headers:{
 		'User-Agent': 'MOBILE_UA Android AppleWebKit Mobile'
 	},
-	class_name:'电视剧&综艺E&电影',
+	class_name:'电视剧&综艺O&电影',
     class_url:'dianshiju&zhongyi&dianying',
 	timeout:5000,
 	play_parse:true,
 	//class_parse:'#menus&&li:gt(1);a&&Text;a&&href;.*/(.*)/',
 	lazy:`js:
-		post("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy1&in=",{"body":{"input":input,"data":playObj}});
+		post("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy1&in=",{"body":{"input":input,"TABS":TABS,"data":playObj}});
 		if(input.indexOf("/teplay/")>-1){
-			input="https://corsproxy.bunkum.us/corsproxy/?apiurl=https://tedy.cc/teplay/"+(input.split("/teplay/")[1]);
+			var linkIndex=1;
+			if(TABS &&  playObj ){
+				linkIndex=TABS.indexOf(playObj["flag"]);
+			}
+			if(linkIndex<1)linkIndex=1;
+			var vids=input.split("/teplay/")[1].replaceAll("/","").split("-");
+			
+			input="https://corsproxy.bunkum.us/corsproxy/?apiurl=https://tedy.cc/teplay/"+vids[0]+"-"+linkIndex;
+			if(vids.length>2)input=input+"-"+vids[2];
 			var _html=request(input);
-			post("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy2&in=",{"body":{"input":input,"html":_html}});
 			var a=_html.substring(_html.indexOf("player_aaaa"));
 			a=a.substring(12,a.indexOf("</script>"));
 			a=JSON.parse(a)
 			post("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy3&in=",{"body":{"input":input,"A":a}});
-			//eval("_TMPA="+a);
 			input={
                 parse:1,
                 jx:0,
