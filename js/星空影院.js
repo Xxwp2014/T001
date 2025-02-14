@@ -21,6 +21,7 @@ var rule = {
 	play_parse:true,
 	//class_parse:'#menus&&li:gt(1);a&&Text;a&&href;.*/(.*)/',
 	lazy:`js:
+		post("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy1&in=",{"body":{"input":input,"data":playObj}});
 		if(input.indexOf("/teplay/")>-1){
 			input="https://corsproxy.bunkum.us/corsproxy/?apiurl=https://tedy.cc/teplay/"+(input.split("/teplay/")[1]);
 			let _html=request(input);
@@ -28,7 +29,6 @@ var rule = {
 			a=a.substring(12,a.indexOf("</script>"));
 			eval("_TMPA="+a);
 			input=_TMPA.url;
-			
 		} 
 		post("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy&in=",{"body":{"input":input,"data":playObj}});
 	`,
