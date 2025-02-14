@@ -1,3 +1,4 @@
+
 var rule = {
 	title:'星空影院',
 	host:'https://corsproxy.bunkum.us',
@@ -27,6 +28,9 @@ var rule = {
 			post("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy2&in=",{"body":{"input":input,"html":_html}});
 			var a=_html.substring(_html.indexOf("player_aaaa"));
 			a=a.substring(12,a.indexOf("</script>"));
+			if(a.indexOf("\\\\")>0){
+				a=a.replaceAll("\\\\","\\");
+			}
 			post("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy3&in=",{"body":{"input":input,"A":a}});
 			eval("_TMPA="+a);
 			input={
