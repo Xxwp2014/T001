@@ -35,7 +35,7 @@ var rule = {
 		"desc": ";.ct-c&&dd:eq(2)&&Text;.ct-c&&dd:eq(3)&&Text;.ct-c&&dt:eq(2)&&Text;.ct-c&&dd:eq(1)&&Text",
 		"content": ".ct-c&&.desc&&Text",
 		"tabs": `js:
-			post("https://z.watano.top/exec/Api01?render=false&test=1&type=二级tabs&in=",{"body":{"input":input,"html":html}});
+			post("https://z.watano.top/exec/Api01?render=false&test=1&type=二级tabs&in=",{"body":{"input":input,"html":html,"data":detailObj}});
 			TABS = ["推荐线路"];
 		`,
 		"lists": `js:
