@@ -23,7 +23,7 @@ var rule = {
 	//class_parse:'#menus&&li:gt(1);a&&Text;a&&href;.*/(.*)/',
 	lazy:`js:
 	
-		request("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy&in="+input);
+		post("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy&in=",{"body":{"input":input}});
 	
 	`,
 	limit:6,
@@ -35,12 +35,12 @@ var rule = {
 		"desc": ";.ct-c&&dd:eq(2)&&Text;.ct-c&&dd:eq(3)&&Text;.ct-c&&dt:eq(2)&&Text;.ct-c&&dd:eq(1)&&Text",
 		"content": ".ct-c&&.desc&&Text",
 		"tabs": `js:
-			request("https://z.watano.top/exec/Api01?render=false&test=1&type=二级tabs&in="+input);
+			post("https://z.watano.top/exec/Api01?render=false&test=1&type=二级tabs&in=",{"body":{"input":input,"html":html}});
 			TABS = ["推荐线路"];
 		`,
 		"lists": `js:
 			log(TABS);
-			request("https://z.watano.top/exec/Api01?render=false&test=1&type=二级lists&in="+input);
+			post("https://z.watano.top/exec/Api01?render=false&test=1&type=二级lists&in=",{"body":{"input":input,"html":html}});
 			pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
 			LISTS = ["AAA$https://hn.bfvvs.com/play/QdJ0YYva/index.m3u8"];`,
 	},
