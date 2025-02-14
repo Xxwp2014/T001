@@ -12,7 +12,7 @@ var rule = {
 	quickSearch:0,
 	filterable:1,
 	headers:{
-		'User-Agent': 'Mozilla/5.0 (Linux; Android 10; VOG-AL00 Build/HUAWEIVOG-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Chrome/66.0.3359.'
+		'User-Agent': 'MOBILE_UA Android AppleWebKit Mobile'
 	},
 	class_name:'电视剧&综艺&电影',
     class_url:'dianshiju&zhongyi&dianying',
