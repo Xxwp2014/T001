@@ -29,8 +29,8 @@ var rule = {
 			a=a.substring(12,a.indexOf("</script>"));
 			eval("_TMPA="+a);
 			input={
-                parse:0,
-                jx:tellIsJx(_TMPA.url),
+                parse:1,
+                jx:0,
                 url:_TMPA.url
             };
 		} 
