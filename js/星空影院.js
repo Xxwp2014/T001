@@ -4,8 +4,7 @@ var rule = {
 	host:'https://corsproxy.bunkum.us',
 	homeUrl:'/corsproxy/?apiurl=https://tedy.cc',
 	url: '/corsproxy/?apiurl=https://tedy.cc/tedy/fyclass-fypage',
-	//homeUrl:'https://api.web.360kan.com/v1/rank?cat=2&size=9',
-       detailUrl:'/corsproxy/?apiurl=https://tedy.cc/fyid',
+    detailUrl:'fyid',
     //searchUrl:'https://api.so.360kan.com/index?force_v=1&kw=**&from=&pageno=fypage&v_ap=1&tab=all',
     //url:'https://api.web.360kan.com/v1/filter/list?catid=fyclass&rank=rankhot&cat=&year=&area=&act=&size=35&pageno=fypage&callback=',
 	
@@ -29,6 +28,9 @@ var rule = {
 	limit:6,
 	推荐: '.main&&.tuijian-banner&&li;a&&title;img&&data-original;.lzbz&&Text;.other&&Text',
 	一级: '.main&&li&&.p1;a&&title;img&&data-original;.lzbz&&Text;a&&href',
+	二级访问前:`js:
+		   MY_URL = 'https://corsproxy.bunkum.us/corsproxy/?apiurl=https://tedy.cc'+detailObj.detailUrl;
+	`,
 	二级: {
 		"title": ".ct-c&&.name&&Text;",//名称  类型
 		"img": ".ct-l&&img&&src",
