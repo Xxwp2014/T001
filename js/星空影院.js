@@ -1,35 +1,40 @@
 var rule = {
-	title:'ĞÇ¿ÕÓ°Ôº',
+	title:'æ˜Ÿç©ºå½±é™¢',
 	host:'https://tedy.cc',
 	url: '/tedy/fyclassfyfilter-fypage',
-	filter_url:'{{fl.class}}',
-	filter:{
-		"dianshiju":[{"key":"class","name":"ÀàĞÍ","value":[{"n":"È«²¿","v":""},{"n":"¹ú¾ç","v":"/guoju"},{"n":"ÈÕº«¾ç","v":"/rihanju"},{"n":"Å·ÃÀ¾ç","v":"/oumeiju"}]}]
-	},
+	//homeUrl:'https://api.web.360kan.com/v1/rank?cat=2&size=9',
+    //detailUrl:'https://api.web.360kan.com/v1/detail?cat=fyclass&id=fyid',
+    //searchUrl:'https://api.so.360kan.com/index?force_v=1&kw=**&from=&pageno=fypage&v_ap=1&tab=all',
+    //url:'https://api.web.360kan.com/v1/filter/list?catid=fyclass&rank=rankhot&cat=&year=&area=&act=&size=35&pageno=fypage&callback=',
+	
 	searchUrl: '/search/?wd=**',
 	searchable:2,
 	quickSearch:0,
 	filterable:1,
 	headers:{
-		'User-Agent': 'MOBILE_UA'
+		'User-Agent': 'Mozilla/5.0 (Linux; Android 10; VOG-AL00 Build/HUAWEIVOG-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Chrome/66.0.3359.'
 	},
+	class_name:'ç”µè§†å‰§&ç»¼è‰º&ç”µå½±',
+    class_url:'tedy/dianshiju&tedy/zhongyi&tedy/dianying',
 	timeout:5000,
-	play_parse:true,
+	play_parse:true,	
+	//class_parse:'#menus&&li:gt(1);a&&Text;a&&href;.*/(.*)/',
+	lazy:'js:input=input.split("?")[0];log(input);',
 	limit:6,
-	ÍÆ¼ö: '*',
-	Ò»¼¶: '.main&&.tuijian-banner&&li;a&&title;img&&src;.lzbz&&Text;.other&&Text',
-	¶ş¼¶: {
-		"title": ".ct-c&&.name&&Text;",//Ãû³Æ  ÀàĞÍ
+	æ¨è: '*',
+	ä¸€çº§: '.main&&.tuijian-banner&&li;a&&title;img&&src;.lzbz&&Text;.other&&Text',
+	äºŒçº§: {
+		"title": ".ct-c&&.name&&Text;",//åç§°  ç±»å‹
 		"img": ".ct-l&&img&&src",
 		"desc": ";.ct-c&&dd:eq(2)&&Text;.ct-c&&dd:eq(3)&&Text;.ct-c&&dt:eq(2)&&Text;.ct-c&&dd:eq(1)&&Text",
 		"content": ".ct-c&&.desc&&Text",
 		"tabs": `js:
-			TABS = ["ÍÆ¼öÏßÂ·"];
+			TABS = ["æ¨èçº¿è·¯"];
 		`,
 		"lists": `js:
 			log(TABS);
 			pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
 			LISTS = ["AAA$https://hn.bfvvs.com/play/QdJ0YYva/index.m3u8"];`,
 	},
-	ËÑË÷: '*',
+	æœç´¢: '*',
 }
