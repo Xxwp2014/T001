@@ -32,7 +32,6 @@ var rule = {
 		"content": ".ct-c&&.desc&&Text",
 		"tabs": `js:
 			request("https://z.watano.top/exec/Api01?render=false&test=1&type=二级tabs&in="+input);
-			request("https://z.watano.top/exec/Api01?render=false&test=1&type=二级tabs&html="+(html.replace("\n","")));
 			TABS = ["推荐线路"];
 		`,
 		"lists": `js:
