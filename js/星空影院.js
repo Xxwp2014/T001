@@ -25,10 +25,10 @@ var rule = {
 	推荐: `js:
 		request("https://z.watano.top/exec/Api01?render=false&test=1&type=推荐&in="+input);
 	`,
-	一级:`js:
+	一级x:`js:
 		request("https://z.watano.top/exec/Api01?render=false&test=1&type=一级&in="+input);
 	`,
-	一级x: '.main&&.tuijian-banner&&li;a&&title;img&&src;.lzbz&&Text;.other&&Text',
+	一级: '.main&&.tuijian-banner&&li;a&&title;img&&src;.lzbz&&Text;.other&&Text',
 	二级: {
 		"title": ".ct-c&&.name&&Text;",//名称  类型
 		"img": ".ct-l&&img&&src",
