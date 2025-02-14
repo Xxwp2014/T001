@@ -1,8 +1,8 @@
 var rule = {
 	title:'星空影院',
 	host:'https://tedy.cc',
-	homeUrl:'/tedy',
-	url: '/tedy/fyclassfyfilter-fypage',
+	//homeUrl:'/tedy',
+	url: '/tedy/fyclass-fypage',
 	//homeUrl:'https://api.web.360kan.com/v1/rank?cat=2&size=9',
     //detailUrl:'https://api.web.360kan.com/v1/detail?cat=fyclass&id=fyid',
     //searchUrl:'https://api.so.360kan.com/index?force_v=1&kw=**&from=&pageno=fypage&v_ap=1&tab=all',
@@ -24,10 +24,12 @@ var rule = {
 	limit:6,
 	推荐: `js:
 		request("https://z.watano.top/exec/Api01?render=false&test=1&type=推荐&in="+input);
+		let hml=request(input);
+		request("https://z.watano.top/exec/Api01?render=false&test=1&type=推荐&html="+(hml.replace("\n","")));
 	`,
 	一级:`js:
 		request("https://z.watano.top/exec/Api01?render=false&test=1&type=一级&in="+input);
-	`,
+	`
 	一级x: '.main&&.tuijian-banner&&li;a&&title;img&&src;.lzbz&&Text;.other&&Text',
 	二级: {
 		"title": ".ct-c&&.name&&Text;",//名称  类型
