@@ -33,11 +33,13 @@ var rule = {
 	`,
 	二级: {
 		"title": ".ct-c&&.name&&Text;",//名称  类型
-		"img": ".ct-l&&img&&src",
+		"img": ".ct-l&&img&&data-original",
 		"desc": ";.ct-c&&dd:eq(2)&&Text;.ct-c&&dd:eq(3)&&Text;.ct-c&&dt:eq(2)&&Text;.ct-c&&dd:eq(1)&&Text",
 		"content": ".ct-c&&.desc&&Text",
 		"tabs": "#stab1&&.playfrom&&li&&Text",
-		"lists": "#idv|#id|",
+		"lists":`
+			post("https://z.watano.top/exec/Api01?render=false&test=1&type=二级lists&in=",{"body":{"input":input,"playFrom":playFrom}});
+		`,
 		"list_text":"#vlink_1&&li&&a&&Text",
 		"list_url":"#vlink_1&&li&&a&&href",
 	},
