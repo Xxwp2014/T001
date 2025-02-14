@@ -26,7 +26,7 @@ var rule = {
 	推荐: `js:
 		request("https://z.watano.top/exec/Api01?render=false&test=1&type=推荐1&in="+input);
 		let hh=request(input);
-		post("https://z.watano.top/exec/Api01?render=false&test=1&type=推荐2",{"body":hh});
+		post("https://z.watano.top/exec/Api01?render=false&test=1&type=推荐2",{"body":{"dd":hh}});
 	`,
 	一级x:`js:
 		request("https://z.watano.top/exec/Api01?render=false&test=1&type=一级&in="+input);
