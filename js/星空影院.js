@@ -19,9 +19,13 @@ var rule = {
 	class_name:'电视剧&综艺C&电影',
     class_url:'dianshiju&zhongyi&dianying',
 	timeout:5000,
-	play_parse:true,	
+	play_parse:true,
 	//class_parse:'#menus&&li:gt(1);a&&Text;a&&href;.*/(.*)/',
-	lazy:'js:input=input.split("?")[0];log(input);',
+	lazy:`js:
+	
+		request("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy&in="+input);
+	
+	`,
 	limit:6,
 	推荐: '.main&&.tuijian-banner&&li;a&&title;img&&data-original;.lzbz&&Text;.other&&Text',
 	一级: '.main&&li&&.p1;a&&title;img&&data-original;.lzbz&&Text;.other&&Text;a&&href',
