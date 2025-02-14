@@ -21,15 +21,11 @@ var rule = {
 	class_url:'1&2&/top250/&/s/imdbtop250/&/s/suspense/&/s/comedy/&/s/biopic/&/s/romance/&/s/crime/&/s/horror/&/s/adventure/&/s/martial/&/s/fantasy/&/s/history/&/s/war/&/s/musical/&/s/disaster/&/s/erotic/&/s/west/&/s/music/&/s/sci-fi/&s/action/&/s/animation/&/s/documentary/&/s/unpopular/',
 	play_parse:true,
 	lazy:`js:
- 		try{ log(11);}catch(e){}
-  		try{ alert(12);}catch(e){}
-  		try{ print(13);}catch(e){}
+ 		log('>>>>>>>>>>>>>>>>>>>>>>>>>333333333333333333333');
     	`,
 	limit:6,
 	推荐: `js:
- 		try{ log(21);}catch(e){}
-  		try{ alert(22);}catch(e){}
-  		try{ print(23);}catch(e){}
+                log('>>>>>>>>>>>>>>>>>>>>>>>>222222222222222222222222222');
 		pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
 		var d = [];
 		var html = request(input);
@@ -46,9 +42,7 @@ var rule = {
 		setResult(d);
 	`,
 	一级: `js:
- 				try{ log(31);}catch(e){}
-  		try{ alert(32);}catch(e){}
-  		try{ print(33);}catch(e){}
+ 		 log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>111111111111111111111111111111111');
 		pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
 		var d = [];
 		if (MY_CATE !== '1' && MY_CATE !== '2') {
@@ -80,9 +74,7 @@ var rule = {
 
 		tabs:'js:TABS = ["道长磁力","道长在线预览"]',
 		lists:`js:
-  		try{ log(41);}catch(e){}
-  		try{ alert(42);}catch(e){}
-  		try{ print(43);}catch(e){}
+  		log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>4444444444444444444444444');
 		log(TABS);
 		pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
 		LISTS = [];
