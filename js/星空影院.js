@@ -16,7 +16,7 @@ var rule = {
 	headers:{
 		'User-Agent': 'MOBILE_UA Android AppleWebKit Mobile'
 	},
-	class_name:'电视剧&综艺2&电影',
+	class_name:'电视剧&综艺A&电影',
     class_url:'dianshiju&zhongyi&dianying',
 	timeout:5000,
 	play_parse:true,	
@@ -28,10 +28,12 @@ var rule = {
 		let hh=request(input);
 		post("https://z.watano.top/exec/Api01?render=false&test=1&type=推荐2",{"body":{"dd":hh}});
 	`,
-	一级x:`js:
+	一级x`js:
 		request("https://z.watano.top/exec/Api01?render=false&test=1&type=一级&in="+input);
+		let hh=request(input);
+		post("https://z.watano.top/exec/Api01?render=false&test=1&type=一级2",{"body":{"dd":hh}});
 	`,
-	一级: '.main&&.tuijian-banner&&li;a&&title;img&&src;.lzbz&&Text;.other&&Text',
+	一级x: '.main&&.tuijian-banner&&li;a&&title;img&&src;.lzbz&&Text;.other&&Text',
 	二级: {
 		"title": ".ct-c&&.name&&Text;",//名称  类型
 		"img": ".ct-l&&img&&src",
