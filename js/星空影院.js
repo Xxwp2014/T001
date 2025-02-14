@@ -1,6 +1,6 @@
 var rule = {
 	title:'星空影院',
-	host:'https://tedy.cc',
+	host:'https://tedy.cc/tedy',
 	url: '/tedy/fyclassfyfilter-fypage',
 	//homeUrl:'https://api.web.360kan.com/v1/rank?cat=2&size=9',
     //detailUrl:'https://api.web.360kan.com/v1/detail?cat=fyclass&id=fyid',
@@ -15,7 +15,7 @@ var rule = {
 		'User-Agent': 'Mozilla/5.0 (Linux; Android 10; VOG-AL00 Build/HUAWEIVOG-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Chrome/66.0.3359.'
 	},
 	class_name:'电视剧&综艺&电影',
-    class_url:'tedy/dianshiju&tedy/zhongyi&tedy/dianying',
+    class_url:'dianshiju&zhongyi&dianying',
 	timeout:5000,
 	play_parse:true,	
 	//class_parse:'#menus&&li:gt(1);a&&Text;a&&href;.*/(.*)/',
