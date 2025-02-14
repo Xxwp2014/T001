@@ -7,7 +7,7 @@
 {"key":"玩偶哥","name":"玩偶哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto","siteUrl":"https://www.wogg.net/","danMu":"弹"}},
 {"key": "6V","name": "6V","type": 3,"api": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/drpy2.js","ext": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/6V.js","searchable": 0,"quickSearch": 0,"changeable": 0},
 {"key": "星空影院","name": "星空影院","type": 3,"api": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/drpy2.js",
-   "ext": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/星空影院.js?t=33","searchable": 0,"quickSearch": 0,"changeable": 0},
+   "ext": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/星空影院.js?t=34","searchable": 0,"quickSearch": 0,"changeable": 0},
 {"key": "有声小说吧js","name": "有声小说吧","type": 3,"api": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/drpy2.js","ext": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/有声小说吧.js","style": {  "type": "rect",  "ratio": 1},"searchable": 1,"quickSearch": 1,"changeable": 1},
    {"key":"小学课堂","name":"小学","type":3,"api":"csp_Bili","style":{"type":"rect","ratio":1.597},"searchable":1,"quickSearch":1,"changeable":1,
    "ext":{"json":"https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/json/小学课堂.json"}},
