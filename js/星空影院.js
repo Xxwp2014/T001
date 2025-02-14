@@ -4,7 +4,7 @@ var rule = {
 	host:'https://corsproxy.bunkum.us',
 	homeUrl:'/corsproxy/?apiurl=https://tedy.cc',
 	url: '/corsproxy/?apiurl=https://tedy.cc/tedy/fyclass-fypage',
-    detailUrl:'fyid',
+        detailUrl:'fyid',
     //searchUrl:'https://api.so.360kan.com/index?force_v=1&kw=**&from=&pageno=fypage&v_ap=1&tab=all',
     //url:'https://api.web.360kan.com/v1/filter/list?catid=fyclass&rank=rankhot&cat=&year=&area=&act=&size=35&pageno=fypage&callback=',
 	
@@ -21,16 +21,7 @@ var rule = {
 	play_parse:true,
 	//class_parse:'#menus&&li:gt(1);a&&Text;a&&href;.*/(.*)/',
 	lazy:`js:
-		post("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy1&in=",{"body":{"input":input,"data":playObj}});
-		if(input.indexOf("/teplay/")>-1){
-			input="https://corsproxy.bunkum.us/corsproxy/?apiurl=https://tedy.cc/teplay/"+(input.split("/teplay/")[1]);
-			let _html=request(input);
-			let a=_html.substring(_html.indexOf("player_aaaa"));
-			a=a.substring(12,a.indexOf("</script>"));
-			eval("_TMPA="+a);
-			input=_TMPA.url;
-		} 
-		post("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy&in=",{"body":{"input":input,"data":playObj}});
+	post("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy1&in=",{"body":{"input":input,"data":playObj}});
 	`,
 	limit:6,
 	推荐: '.main&&.tuijian-banner&&li;a&&title;img&&data-original;.lzbz&&Text;.other&&Text',
@@ -51,11 +42,8 @@ var rule = {
 				let tmp=pdfh(it, "body&&Text")
 				TABS.push(tmp);
 			});
-			
-
 		`,
 		"lists": `js:
-			post("https://z.watano.top/exec/Api01?render=false&test=1&type=二级TABS&in=",{"body":{"input":input,"TABS":TABS}});
 			pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
 			LISTS = [];
 			let i = 1;
@@ -69,11 +57,7 @@ var rule = {
 					});
 					if(d.length>0) LISTS.push(d)
 			});
-			post("https://z.watano.top/exec/Api01?render=false&test=1&type=二级LISTS&in=",{"body":{"input":input,"LISTS":LISTS}});
 		`
-		//"lists":`#idv|#id`,
-		//"list_text":"#vlink_1&&li&&a&&Text",
-		//"list_url":"#vlink_1&&li&&a&&href"
 	},
 	搜索: '*',
 }
