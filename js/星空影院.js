@@ -24,10 +24,12 @@ var rule = {
 	limit:6,
 	推荐: `js:
 		request("https://z.watano.top/exec/Api01?render=false&test=1&type=推荐&in="+input);
+		let hml=request(input);
+		request("https://z.watano.top/exec/Api01?render=false&test=1&type=推荐&html="+(hml.replace("\n","")));
 	`,
 	一级:`js:
 		request("https://z.watano.top/exec/Api01?render=false&test=1&type=一级&in="+input);
-	`
+	`,
 	一级x: '.main&&.tuijian-banner&&li;a&&title;img&&src;.lzbz&&Text;.other&&Text',
 	二级: {
 		"title": ".ct-c&&.name&&Text;",//名称  类型
@@ -36,7 +38,7 @@ var rule = {
 		"content": ".ct-c&&.desc&&Text",
 		"tabs": `js:
 			request("https://z.watano.top/exec/Api01?render=false&test=1&type=二级tabs&in="+input);
-			request("https://z.watano.top/exec/Api01?render=false&test=1&type=二级tabs&in="+html);
+			request("https://z.watano.top/exec/Api01?render=false&test=1&type=二级tabs&html="+(html.replace("\n","")));
 			TABS = ["推荐线路"];
 		`,
 		"lists": `js:
