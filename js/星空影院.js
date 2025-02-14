@@ -15,15 +15,22 @@ var rule = {
 	headers:{
 		'User-Agent': 'MOBILE_UA Android AppleWebKit Mobile'
 	},
-	class_name:'电视剧&综艺A&电影',
+	class_name:'电视剧&综艺C&电影',
     class_url:'dianshiju&zhongyi&dianying',
 	timeout:5000,
 	play_parse:true,
 	//class_parse:'#menus&&li:gt(1);a&&Text;a&&href;.*/(.*)/',
 	lazy:`js:
-	
+		if(input.indexOf("/teplay/")>-1){
+			input="https://corsproxy.bunkum.us/corsproxy/?apiurl=https://tedy.cc/teplay/"+(input.split("/teplay/")[1]);
+			let _html=request(input);
+			let a=_html.substring(_html.indexOf("player_aaaa"));
+			a=a.substring(12,a.indexOf("</script>"));
+			eval("_TMPA="+a);
+			input=_TMPA.url;
+			
+		} 
 		post("https://z.watano.top/exec/Api01?render=false&test=1&type=lazy&in=",{"body":{"input":input,"data":playObj}});
-	
 	`,
 	limit:6,
 	推荐: '.main&&.tuijian-banner&&li;a&&title;img&&data-original;.lzbz&&Text;.other&&Text',
@@ -57,7 +64,7 @@ var rule = {
 					d = d.map(function(it) {
 						var title = pdfh(it, 'a&&Text');
 						var burl = pd(it, 'a&&href');
-						if(burl.indexOf("8888-1")<0)return "";
+						if(burl.indexOf("8888-1")>0)return "";
 						return title + '$' + burl
 					});
 					if(d.length>0) LISTS.push(d)
