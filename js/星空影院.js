@@ -16,7 +16,7 @@ var rule = {
 	headers:{
 		'User-Agent': 'MOBILE_UA Android AppleWebKit Mobile'
 	},
-	class_name:'电视剧&综艺4&电影',
+	class_name:'电视剧&综艺1&电影',
     class_url:'dianshiju&zhongyi&dianying',
 	timeout:5000,
 	play_parse:true,	
@@ -25,7 +25,7 @@ var rule = {
 	limit:6,
 	推荐: `js:
 		request("https://z.watano.top/exec/Api01?render=false&test=1&type=推荐1&in="+input);
-		
+		let hh=request(input);
 		post("https://z.watano.top/exec/Api01?render=false&test=1&type=推荐2",{"data":hh});
 	`,
 	一级x:`js:
