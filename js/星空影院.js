@@ -15,8 +15,8 @@ var rule = {
 	headers:{
 		'User-Agent': 'MOBILE_UA Android AppleWebKit Mobile'
 	},
-	class_name:'电视剧&1综艺&电影',
-    class_url:'/tedy/dianshiju&/tedy/zhongyi&/tedy/dianying',
+	class_name:'电视剧&综艺2&电影',
+    class_url:'dianshiju&zhongyi&dianying',
 	timeout:5000,
 	play_parse:true,	
 	//class_parse:'#menus&&li:gt(1);a&&Text;a&&href;.*/(.*)/',
