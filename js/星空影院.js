@@ -23,11 +23,7 @@ var rule = {
 	//class_parse:'#menus&&li:gt(1);a&&Text;a&&href;.*/(.*)/',
 	lazy:'js:input=input.split("?")[0];log(input);',
 	limit:6,
-	推荐: `js:
-		request("https://z.watano.top/exec/Api01?render=false&test=1&type=推荐1&in="+input);
-		let hh=request(input);
-		post("https://z.watano.top/exec/Api01?render=false&test=1&type=推荐2",{"body":{"dd":hh}});
-	`,
+	推荐: '.main&&.tuijian-banner&&li;a&&title;img&&src;.lzbz&&Text;.other&&Text',
 	一级:`js:
 		request("https://z.watano.top/exec/Api01?render=false&test=1&type=一级&in="+input);
 		let hh=request(input);
