@@ -1,7 +1,7 @@
 
 var rule = {
 	title:'星空影院',
-	host:'https://tedy.cc',
+	host:'https://corsproxy.bunkum.us/corsproxy/?apiurl=https://tedy.cc',
 	//homeUrl:'/tedy',
 	url: '/tedy/fyclass-fypage',
 	//homeUrl:'https://api.web.360kan.com/v1/rank?cat=2&size=9',
