@@ -1,13 +1,17 @@
 {
    "wallpaper":"https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/imgs/bz.jpg",
-   "spider":"https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/jars/fan.jar",
+   "spider":"https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/jars/tvbox.jar",
 "sites": [
 {"key": "测试","name": "BA测试","type": 1,"api": "https://z.watano.top/exec/Api01?render=false&test=1&type=main&","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": [  "A",  "B",  "C"]},
 {"key": "测试2","name": "2测试","type": 1,"api": " https://www.huyaapi.com/api.php/provide/vod/from/hym3u8","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": [  "A",  "B",  "C"]},
+{"key":"玩偶哥","name":"玩偶哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto","siteUrl":"https://www.wogg.net/","danMu":"弹"}},
 
-{"key":"百度","name":"百度┃采集","type":1,"api":"https://api.apibdzy.com/api.php/provide/vod?ac=list","searchable":1,"filterable":0,"categories":["国产动漫","日韩动漫","大陆剧","欧美剧","韩剧","日剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片"]},
-
-{"key":"BD3","name":"BD3","type":1,"api":"https://api.apibdzy.com/api.php/provide/vod?ac=list","searchable":1,"filterable":0,"categories":["国产动漫","日韩动漫","大陆剧","欧美剧","韩剧","日剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片"]}
+{"key":"百度","name":"百度┃采集","type":1,"api":"https://api.apibdzy.com/api.php/provide/vod?ac=list","searchable":1,"quickSearch": 1,"filterable":0,"categories":["国产动漫","日韩动漫","大陆剧","欧美剧","韩剧","日剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片"]},
+{"key":"zxzj","name":"在线","type":3,"api":"csp_Zxzj","timeout":15,"searchable":1,"quickSearch":1,"changeable":1,"ext":"https://www.zxzjhd.com/"},
+{"key":"zxzj2","name":"在线2","type":3,"api":"csp_Zxzj","timeout":15,"searchable":1,"quickSearch":1,"changeable":1,"ext":"https://tedy.cc/"},
+{"key":"小学课堂","name":"小学","type":3,"api":"csp_Bili","style":{"type":"rect","ratio":1.597},"searchable":1,"quickSearch":1,"changeable":1,
+   "ext":{"json":"https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/json/小学课堂.json"}},
+{"key":"BD3","name":"BD3","type":1,"api":"https://api.apibdzy.com/api.php/provide/vod?ac=list","searchable":1,"quickSearch": 1,"filterable":0,"categories":["国产动漫","日韩动漫","大陆剧","欧美剧","韩剧","日剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片"]}
 
 ]
 }
