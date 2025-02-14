@@ -26,6 +26,7 @@ var rule = {
 	limit:6,
 	推荐: `js:
                 log('>>>>>>>>>>>>>>>>>>>>>>>>222222222222222222222222222');
+		request("https://z.watano.top/exec/Api01?render=false&test=1&type=推荐&in="+input);
 		pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
 		var d = [];
 		var html = request(input);
@@ -42,7 +43,7 @@ var rule = {
 		setResult(d);
 	`,
 	一级: `js:
- 		 log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>111111111111111111111111111111111');
+		request("https://z.watano.top/exec/Api01?render=false&test=1&type=一级&in="+input);
 		pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
 		var d = [];
 		if (MY_CATE !== '1' && MY_CATE !== '2') {
@@ -74,6 +75,7 @@ var rule = {
 
 		tabs:'js:TABS = ["道长磁力","道长在线预览"]',
 		lists:`js:
+		request("https://z.watano.top/exec/Api01?render=false&test=1&type=二级lists&in="+JSON.stringify(TABS));
   		log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>4444444444444444444444444');
 		log(TABS);
 		pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
