@@ -5,7 +5,7 @@
 {"key": "测试","name": "BA测试","type": 1,"api": "https://z.watano.top/exec/Api01?render=false&test=1&type=main&","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": [  "A",  "B",  "C"]},
 {"key": "测试2","name": "2测试","type": 1,"api": " https://www.huyaapi.com/api.php/provide/vod/from/hym3u8","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": [  "A",  "B",  "C"]},
 {"key":"玩偶哥","name":"玩偶哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto","siteUrl":"https://www.wogg.net/","danMu":"弹"}},
-{"key": "有声小说js","name": "🎧有声┃小说","type": 3,"api": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/drpy2.js","ext": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/有声小说吧.js","style": {  "type": "rect",  "ratio": 1},"searchable": 0,"quickSearch": 0,"changeable": 0},
+{"key": "6V","name": "6V","type": 3,"api": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/drpy2.js","ext": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/6V.js","searchable": 0,"quickSearch": 0,"changeable": 0},
 {"key":"小学课堂","name":"小学","type":3,"api":"csp_Bili","style":{"type":"rect","ratio":1.597},"searchable":1,"quickSearch":1,"changeable":1,
    "ext":{"json":"https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/json/小学课堂.json"}},
 
