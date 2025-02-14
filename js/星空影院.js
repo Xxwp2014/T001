@@ -15,7 +15,7 @@ var rule = {
 	headers:{
 		'User-Agent': 'MOBILE_UA Android AppleWebKit Mobile'
 	},
-	class_name:'电视剧&综艺M&电影',
+	class_name:'电视剧&综艺A&电影',
     class_url:'dianshiju&zhongyi&dianying',
 	timeout:5000,
 	play_parse:true,
@@ -44,12 +44,29 @@ var rule = {
 				let tmp=pdfh(it, "body&&Text")
 				TABS.push(tmp);
 			});
-			post("https://z.watano.top/exec/Api01?render=false&test=1&type=二级TABS&in=",{"body":{"input":input,"TABS":TABS}});
+			
 
 		`,
-		"lists":`#idv|#id`,
-		"list_text":"#vlink_1&&li&&a&&Text",
-		"list_url":"#vlink_1&&li&&a&&href"
+		"lists": `js:
+			post("https://z.watano.top/exec/Api01?render=false&test=1&type=二级TABS&in=",{"body":{"input":input,"TABS":TABS}});
+			pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
+			LISTS = [];
+			let i = 1;
+			TABS.forEach(function(tab) {
+				var d = pdfa(html, '#vlink_1&&li');
+					d = d.map(function(it) {
+						var title = pdfh(it, 'a&&Text');
+						var burl = pd(it, 'a&&href');
+						if(burl.indexOf("8888-1")<0)return "";
+						return title + '$' + burl
+					});
+					if(d.length>0) LISTS.push(d)
+			});
+			post("https://z.watano.top/exec/Api01?render=false&test=1&type=二级LISTS&in=",{"body":{"input":input,"LISTS":LISTS}});
+		`
+		//"lists":`#idv|#id`,
+		//"list_text":"#vlink_1&&li&&a&&Text",
+		//"list_url":"#vlink_1&&li&&a&&href"
 	},
 	搜索: '*',
 }
