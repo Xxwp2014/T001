@@ -9,6 +9,10 @@
 {"key":"小学课堂","name":"小学","type":3,"api":"csp_Bili","style":{"type":"rect","ratio":1.597},"searchable":1,"quickSearch":1,"changeable":1,
    "ext":{"json":"https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/json/小学课堂.json"}},
 
-]
+],
+    "parses": [
+    {"name": "Json聚合","type": 3,"url": "Demo" },
+    {"name": "Web聚合","type": 3,"url": "Web"}
+    ]
 }
     
