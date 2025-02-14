@@ -28,7 +28,7 @@ var rule = {
 	`,
 	limit:6,
 	推荐: '.main&&.tuijian-banner&&li;a&&title;img&&data-original;.lzbz&&Text;.other&&Text',
-	一级: '.main&&li&&.p1;a&&title;img&&data-original;.lzbz&&Text;.other&&Text;a&&href',
+	一级: '.main&&li&&.p1;a&&title;img&&data-original;.lzbz&&Text;a&&href',
 	二级: {
 		"title": ".ct-c&&.name&&Text;",//名称  类型
 		"img": ".ct-l&&img&&src",
