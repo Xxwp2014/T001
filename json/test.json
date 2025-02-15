@@ -2,15 +2,26 @@
    "wallpaper":"https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/imgs/bz.jpg",
    "spider":"https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/jars/tvbox.jar",
 "sites": [
-{"key": "测试","name": "BA测试","type": 1,"api": "https://z.watano.top/exec/Api01?render=false&test=1&type=main&","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": [  "A",  "B",  "C"]},
 {"key": "测试2","name": "2测试","type": 1,"api": " https://www.huyaapi.com/api.php/provide/vod/from/hym3u8","playUrl": "","searchable": 1,"quickSearch": 1,"filterable": 1,"categories": [  "A",  "B",  "C"]},
 {"key":"玩偶哥","name":"玩偶哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto","siteUrl":"https://www.wogg.net/","danMu":"弹"}},
 {"key": "6V","name": "6V","type": 3,"api": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/drpy2.js","ext": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/6V.js","searchable": 0,"quickSearch": 0,"changeable": 0},
 {"key": "星空影院","name": "星空影院","type": 3,"api": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/drpy2.js",
-   "ext": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/星空影院.js?t=41","searchable": 1,"quickSearch":1,"changeable": 1},
+"ext": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/星空影院.js?t=41","searchable": 1,"quickSearch":1,"changeable": 1},
+
+{"key": "8x01","name": "8x01","type": 3,
+"api": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/drpy2.js?t=1",
+"ext": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/8x01.js?t=A06",
+"searchable": 1,"quickSearch":1,"changeable": 1},
+
+{"key": "ttyy1","name": "TT影视","type": 3,
+"api": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/drpy2.js?t=1",
+"ext": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/ttyy.js?t=A06",
+"searchable": 1,"quickSearch":1,"changeable": 1}
+,
+
 {"key": "有声小说吧js","name": "有声小说吧","type": 3,"api": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/drpy2.js","ext": "https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/js/有声小说吧.js","style": {  "type": "rect",  "ratio": 1},"searchable": 1,"quickSearch": 1,"changeable": 1},
-   {"key":"小学课堂","name":"小学","type":3,"api":"csp_Bili","style":{"type":"rect","ratio":1.597},"searchable":1,"quickSearch":1,"changeable":1,
-   "ext":{"json":"https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/json/小学课堂.json"}},
+{"key":"小学课堂","name":"小学","type":3,"api":"csp_Bili","style":{"type":"rect","ratio":1.597},"searchable":1,"quickSearch":1,"changeable":1,
+"ext":{"json":"https://ghfast.top/https://raw.githubusercontent.com/Xxwp2014/T001/main/json/小学课堂.json"}},
 
 ],
  "parses": [
@@ -38,14 +49,13 @@
 {"name":"世界","type":1,"url":"http://175.178.183.192:84/api/?key=f3913eb3f85a8298b3e6e427b8712b2e&url=","ext":{"flag":["qq","mgtv","YuMi-vip"]}},
 {"name":"咸鱼","type":0,"url":"https://jx.xyflv.cc/?url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36","referer":"https://www.xyflv.cc/"}}},
 {"name":"云解析","type":0,"url":"https://jx.yparse.com/index.php?url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36"}}},
-    {"name": "飞云","type": 1,"url": "http://122.228.84.103:7777/api/?key=o9fQb0Jvz0qZzY19Jq&url=","ext": {"flag": [  "FYNB",  "mgtv",  "qiyi",  "imgo",  "爱奇艺",  "奇艺",  "qq",  "腾讯",  "youku",  "优酷",  "pptv",  "PPTV",  "letv",  "乐视",  "leshi",  "bilibili",  "哔哩哔哩",  "哔哩",  "mgtv",  "芒果"],"header": {  "User-Agent": "okhttp/4.1.0"}}},
-    {"name": "亮亮","type": 1,"url": "http://xiutan.shiyifacai.com/json/qingfeng.php?url=","ext": {"flag": [  "seven"],"header": {  "User-Agent": "Lavf/58.12.100"}}},
-    {"name": "赞赞","type": 1,"url": "https://vip.yybjs.top/home/api?type=ys&uid=2691400&key=bcmqsvwyzACFIPY368&url=","ext": {"flag": [  "JMZN"],"header": {  "User-Agent": "okhttp/4.1.0"}}},
-    {"name": "左岸","type": 1,"url": "http://122.228.84.103:5829/jx/?url=","ext": {"flag": [  "seven"],"header": {  "User-Agent": "okhttp/4.1.0"}}},
-
+{"name": "飞云","type": 1,"url": "http://122.228.84.103:7777/api/?key=o9fQb0Jvz0qZzY19Jq&url=","ext": {"flag": [  "FYNB",  "mgtv",  "qiyi",  "imgo",  "爱奇艺",  "奇艺",  "qq",  "腾讯",  "youku",  "优酷",  "pptv",  "PPTV",  "letv",  "乐视",  "leshi",  "bilibili",  "哔哩哔哩",  "哔哩",  "mgtv",  "芒果"],"header": {  "User-Agent": "okhttp/4.1.0"}}},
+{"name": "亮亮","type": 1,"url": "http://xiutan.shiyifacai.com/json/qingfeng.php?url=","ext": {"flag": [  "seven"],"header": {  "User-Agent": "Lavf/58.12.100"}}},
+{"name": "赞赞","type": 1,"url": "https://vip.yybjs.top/home/api?type=ys&uid=2691400&key=bcmqsvwyzACFIPY368&url=","ext": {"flag": [  "JMZN"],"header": {  "User-Agent": "okhttp/4.1.0"}}},
+{"name": "左岸","type": 1,"url": "http://122.228.84.103:5829/jx/?url=","ext": {"flag": [  "seven"],"header": {  "User-Agent": "okhttp/4.1.0"}}},
 {"name":"爱豆","type":0,"url":"https://jx.aidouer.net/?url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36","referer":"https://jiejie.uk/"}}}
 
-  ],
+],
   "doh": [
     {"name": "Google","url": "https://dns.google/dns-query","ips": [  "8.8.4.4",  "8.8.8.8"]},
     {"name": "Cloudflare","url": "https://cloudflare-dns.com/dns-query","ips": [  "1.1.1.1",  "1.0.0.1",  "2606:4700:4700::1111",  "2606:4700:4700::1001"]},
