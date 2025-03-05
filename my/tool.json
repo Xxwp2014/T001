@@ -1,0 +1,9 @@
+{
+"wallpaper":"./imgs/bz.jpg",
+"spider":"http://192.168.2.9:8848/TVbox/jars/sjs.jar",
+"sites": [
+	{"api": "csp_Market",     "key": "APP商店","name": "🎰┃蜂蜜┃商店","type": 3,"searchable": 1,"changeable": 0,"ext": "./libs/market.json"},
+	   {"key":"js_tool","name":"工具","type":3,"api":"csp_JsSpider","ext":"http://192.168.2.9:8848/TVbox/my/libs/js/tool.js","searchable": 0,"quickSearch": 0,"changeable": 0}
+	]
+}
+    

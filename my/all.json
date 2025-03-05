@@ -1,0 +1,17 @@
+{
+	"urls":[
+		{"url":"http://192.168.2.9:8848/TVbox/my/4.json","name":"四大家族"},
+		{"url":"http://192.168.2.9:8848/TVbox/my/ys.json","name":"原生"} ,
+		{"url":"http://192.168.2.9:8848/TVbox/my/qt.json","name":"其他"} ,
+		{"url":"http://192.168.2.9:8848/TVbox/my/et.json","name":"儿童"},
+		{"url":"http://192.168.2.9:8848/TVbox/my/ty.json","name":"体育"},
+		{"url":"http://192.168.2.9:8848/TVbox/my/dm.json","name":"动漫"},
+		{"url":"http://192.168.2.9:8848/TVbox/my/wp.json","name":"网盘"},
+		{"url":"http://192.168.2.9:8848/TVbox/my/bili.json","name":"哔哩"},
+		{"url":"http://192.168.2.9:8848/TVbox/my/ting.json","name":"有声"},
+		{"url":"http://192.168.2.9:8848/TVbox/my/mv.json","name":"MV"},
+		{"url":"http://192.168.2.9:8848/TVbox/my/test.json","name":"测试"},
+		{"url":"http://192.168.2.9:8848/TVbox/my/cr.json","name":"cr"},
+		{"url":"http://192.168.2.9:8848/TVbox/my/tool.json","name":"Tool"}
+	]
+}

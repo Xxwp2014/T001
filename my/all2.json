@@ -1,0 +1,16 @@
+{
+	"urls":[
+		{"url":"clan://localhost/TV/my/4.json","name":"四大家族"},
+		{"url":"clan://localhost/TV/my/ys.json","name":"原生"} ,
+		{"url":"clan://localhost/TV/my/qt.json","name":"其他"} ,
+		{"url":"clan://localhost/TV/my/et.json","name":"儿童"},
+		{"url":"clan://localhost/TV/my/ty.json","name":"体育"},
+		{"url":"clan://localhost/TV/my/dm.json","name":"动漫"},
+		{"url":"clan://localhost/TV/my/wp.json","name":"网盘"},
+		{"url":"clan://localhost/TV/my/bili.json","name":"哔哩"},
+		{"url":"clan://localhost/TV/my/ting.json","name":"有声"},
+		{"url":"clan://localhost/TV/my/mv.json","name":"MV"},
+		{"url":"clan://localhost/TV/my/test.json","name":"测试"},
+		{"url":"clan://localhost/TV/my/tool.json","name":"Tool"}
+	]
+}
