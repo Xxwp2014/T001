@@ -5,10 +5,11 @@
 // https://avone.me/api/v1/videos/categories //{"20":"日韓線上","21":"亞洲線上","22":"自拍線上","23":"歐美線上","24":"動漫線上"}
 import  P  from"public.js"; 
 const host="https://avone.me/api/v1";
-const videoApi='/search/videos?start={start}&count={limit}&categoryOneOf={class}&sort=-match&searchTarget=local';
-const searchApi='/search/videos?start=0&count=100&search={wd}&sort=-match&searchTarget=local';
+const videoApi='/search/videos?start={start}&count={limit}&categoryOneOf={class}&sort=-createdAt';
+const searchApi='/search/videos?start=0&count=100&search={wd}&sort=-match';
 const classApi="/videos/categories";
 const detailApi="/videos/";
+const newestApi="/overviews/videos?page={pg}"
 const size=20;
 let VODS_CACHE={};
 let classes=[];
@@ -19,6 +20,24 @@ request=function(url){
 	}else{
 		return  J.get(url);
 	}
+}
+function getHomeList(pg)
+{
+	let vodList=[];
+	let data=request(newestApi.replace("{pg}",pg));
+	if(typeof data==="string")data=JSON.parse(data);
+	for(let att in data){
+		let tmp=data[att];
+		if(tmp && tmp.length>0){
+			for(let i=0;i<tmp.length;i++){
+				let tmp2=tmp[i];
+				if(tmp2 && tmp2["videos"]){
+					vodList=vodList.concat(tmp2["videos"]);
+				}
+			}
+		}
+	}
+	return doVods({data:vodList});
 }
 function doVods(vods){
 	let results=[];
@@ -41,7 +60,7 @@ function doVods(vods){
 function getClassList(){
 	let data=request(classApi);
 	if(typeof data==="string")data=JSON.parse(data);
-	let classList=[];
+	let classList=[{"type_id":99,"type_name":"最新"}];
 	for(var k in data){
 		let c={};
 		c.type_id=k;
@@ -59,7 +78,7 @@ function init (ext){
 }
 
 function homeContent(filter){
-	let classList=getClassList();
+	let classList=[];//getClassList();
 	let classStr=localStorage.getItem(mcode+".class");
 	if(classStr && classStr.length>3){
 		classList=JSON.parse(classStr);
@@ -80,9 +99,13 @@ function homeContent(filter){
 function categoryContent(tid,pg,filter,extend){
 	let VODS=[];
 	try{
-		let vods=request(videoApi.replaceAll("{class}",tid).replaceAll("{start}",(pg-1)*size).replaceAll("{limit}",size));
-		if(typeof vods==="string")vods=JSON.parse(vods);
-		VODS= doVods(vods);
+		if(tid==99){
+			VODS=getHomeList(pg);
+		}else{
+			let vods=request(videoApi.replaceAll("{class}",tid).replaceAll("{start}",(pg-1)*size).replaceAll("{limit}",size));
+			if(typeof vods==="string")vods=JSON.parse(vods);
+			VODS= doVods(vods);
+		}
 	}catch(e){
 		J.toast(e.msg||e.message);
 	}
@@ -114,7 +137,7 @@ function detailContent(ids){
 	};
 }
 function searchContent(key,isquick){
-	console.log("====search==8x01==key:"+key+"|isquick:"+isquick); 
+	console.log("====search==avone==key:"+key+"|isquick:"+isquick); 
 	let vods=request(searchApi.replaceAll("{wd}",key));
 	if(typeof vods==="string")vods=JSON.parse(vods);
 	let VODS= doVods(vods);

@@ -3,7 +3,7 @@ const createMyVodsSql=`CREATE TABLE IF NOT EXISTS "my_vods" ( "id" INTEGER NOT N
 
 const VODTMP={"mcode":1,"mtype":1,"vod_id":1,"group_id":0,"type_id_1":0,"type_name":1,"type_id":1,"vod_name":"name","vod_sub":0,"vod_en":1,"vod_status":0,"vod_letter":0,"vod_color":0,"vod_tag":0,"vod_class":1,"vod_pic":1,"vod_pic_thumb":0,"vod_pic_slide":0,"vod_pic_screenshot":0,"vod_actor":1,"vod_director":1,"vod_writer":0,"vod_behind":0,"vod_blurb":0,"vod_remarks":1,"vod_pubdate":0,"vod_total":0,"vod_serial":0,"vod_tv":0,"vod_weekday":0,"vod_area":0,"vod_lang":0,"vod_year":1,"vod_version":0,"vod_state":0,"vod_author":1,"vod_jumpurl":0,"vod_tpl":0,"vod_tpl_play":0,"vod_tpl_down":0,"vod_isend":0,"vod_lock":0,"vod_level":0,"vod_copyright":0,"vod_points":0,"vod_points_play":0,"vod_points_down":0,"vod_hits":0,"vod_hits_day":0,"vod_hits_week":0,"vod_hits_month":0,"vod_duration":0,"vod_up":0,"vod_down":0,"vod_score":0,"vod_score_all":0,"vod_score_num":0,"vod_time":1,"vod_time_add":0,"vod_time_hits":0,"vod_time_make":0,"vod_trysee":0,"vod_douban_id":0,"vod_douban_score":0,"vod_reurl":0,"vod_rel_vod":0,"vod_rel_art":0,"vod_pwd":0,"vod_pwd_url":0,"vod_pwd_play":0,"vod_pwd_play_url":0,"vod_pwd_down":0,"vod_pwd_down_url":0,"vod_content":1,"vod_play_from":1,"vod_play_server":0,"vod_play_note":0,"vod_play_url":1,"vod_down_from":0,"vod_down_server":0,"vod_down_note":1,"vod_down_url":1,"vod_plot":0,"vod_plot_name":0,"vod_plot_detail":0}
 let lastProxy="";
-const proxys=[ 
+const proxys=[
 "DIRECT",
 "https://api.allorigins.win/raw?url=",
 "https://corsproxy.bunkum.us/corsproxy/?apiurl=",
@@ -18,14 +18,27 @@ const imgProxys=[
 	"https://api.cors.lol/?url="
 ]
 
-
+function splitProxy(url){
+	
+	for(let i=1;i<proxys.length;i++){
+		if(url.indexOf(proxys[i])>-1){
+			return [url.replaceAll(proxys[i],""),proxys[i],i];
+		}
+	}
+	return [url,"",0];
+	
+}
 function proxyReq(url,params){
 	if(!lastProxy || lastProxy.length<3){
 		if(typeof params=="boolean" && params===true){
 			lastProxy=proxys[1];
 		}else if(typeof params=="object" && params["proxy"]==true){
 			lastProxy=proxys[1];
-		}else{
+		}else if(typeof params==="number" || (typeof params=="object" && typeof params["proxyIndex"]=="number" )){
+			if(typeof params==="number")lastProxy=proxys[params];
+			else lastProxy=proxys[params["proxyIndex"]];
+			
+		}else {
 			lastProxy=proxys[0];
 		}
 	}
@@ -263,4 +276,4 @@ function initVodCollectToMyDb(){
 }
 
 export default { getNewUrl,proxyReq,dealJson,toLive,getProxyUrl,querySql,queryNum,execSql,queryFirst,saveToDb,
-getQueryParams,getImgProxyUrl,initVodCollectToMyDb,initTables,findVod}
+getQueryParams,getImgProxyUrl,initVodCollectToMyDb,initTables,findVod,splitProxy}

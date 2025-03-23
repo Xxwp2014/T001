@@ -10,7 +10,7 @@ function homeContent(filter){
  	J.toast("home7");
 	let classs=P.querySql("select distinct mcode as type_id,mtype as type_name from my_vods");
 	return {
-		"class":[{"type_id":"his","type_name":"播放记录"},{"type_id":"fav","type_name":"收藏"}].concat(classs)
+		"class":[{"type_id":"his","type_name":"播放记录"},{"type_id":"fav","type_name":"收藏"},{"type_id":"5gdb","type_name":"5GDB"}].concat(classs)
 	};
 }
 function categoryContent(tid,pg,filter,extend){
@@ -24,6 +24,8 @@ function categoryContent(tid,pg,filter,extend){
 			favReload=true;
 		}
 		vods=P.querySql("select * from my_vods_play where fav=1 order by id desc  limit ?,? ",[size*(pg-1),size]);
+	}else if(tid=="5gdb"){
+		vods=Db.queryLocal("select * from `vod_5g` limit ?,? ",[size*(pg-1),size],"/sdcard/TV/my/lib/cr/5g.db");
 	}else{
 		vods=P.querySql("select * from my_vods where mcode=? limit ?,? ",[tid,size*(pg-1),size]);
 	}
@@ -45,6 +47,10 @@ function detailContent(ids){
 	let vod={};
 	if(id.endsWith("his")||id.endsWith("fav")){
 		vod=P.queryFirst("select * from my_vods_play where id=? ",[nid]);
+	}else if(id.endsWith("5gdb")){
+		let vods2=Db.queryLocal("select * from vod_5g where id=? ",[nid],"/sdcard/TV/my/lib/cr/5g.db");
+		if(vods2)vod=vods2[0];
+		
 	}else {
 		vod=P.queryFirst("select * from my_vods where id=? ",[nid]);
 	}

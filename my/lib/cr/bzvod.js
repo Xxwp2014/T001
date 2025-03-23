@@ -4,8 +4,9 @@ let VODS_CACHE={};
 let PROXY_PIC=false;//"https://corsproxy.bunkum.us/corsproxy/?apiurl=";//"https://api.allorigins.win/raw?url=";
 let mcode="";
 let to_db_type=0;//0 不保存 1 保存 
+let defaultProxyIndex=0;
 request=function(url){
-  	let data=  P.proxyReq(url);
+  	let data=  P.proxyReq(url,{"proxyIndex":1,"headers":{'User-Agent':'MOBILE_UA'}});
 	if(typeof data==="string")data=JSON.parse(data);
 	return data;
 }
@@ -40,6 +41,7 @@ function init (ext){
 	 vodapi=params["url"];
 	 PROXY_PIC=params["imgproxy"]==1;
 	 mcode=vodapi;
+	 defaultProxyIndex=params["defaultProxyIndex"]||0;
 	 if(mcode.indexOf("://")>0){
 		 mcode=mcode.split("://")[1];
 	 }
