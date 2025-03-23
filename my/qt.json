@@ -83,10 +83,14 @@
 {"key": "p4_Kugou","name": "p4_Kugou","type": 3,"api": "csp_Kugou","searchable": 1,"quickSearch": 1,"filterable": 1,"jar":"./P4.jar"},
 {"key": "p4_Kanqiu","name": "p4_Kanqiu","type": 3,"api": "csp_Kanqiu","searchable": 1,"quickSearch": 1,"filterable": 1,"jar":"./P4.jar"},
 
+{ "key": "阿里影视", "name": "🌠阿里┃影视", "type": 1, "api": "https://alivod.com/api.php/provide/vod/", "searchable": 1, "quickSearch": 1, "categories": [ "动作片", "喜剧片", "爱情片", "科幻片", "恐怖片", "剧情片", "战争片", "国产剧", "香港剧", "台湾剧", "日本剧", "韩国剧", "欧美剧", "海外剧", "理论片", "纪录片", "内地综艺", "港台综艺", "日韩综艺", "欧美综艺", "悬疑片", "国产动漫", "日韩动漫", "欧美动漫", "动漫电影", "家庭片", "古装片" ] },
+ { "key": "无忧影视", "name": "🌠无忧┃影视", "type": 1, "api": "https://www.wyvod.com/api.php/provide/vod/", "searchable": 1, "quickSearch": 1, "categories": [ "动作片", "喜剧片", "爱情片", "科幻片", "恐怖片", "剧情片", "战争片", "国产剧", "港剧", "台剧", "日剧", "韩剧", "欧美剧", "海外剧", "经典片", "动画片", "泰剧", "大陆综艺", "港台综艺", "日韩综艺", "欧美综艺", "国产动漫", "日韩动漫", "欧美动漫" ] },
+ { "key": "三八影视", "name": "🌠三八┃影视", "type": 1, "api": "https://vod38.com/api.php/provide/vod/", "searchable": 1, "quickSearch": 1, "categories": [ "动作片", "喜剧片", "爱情片", "科幻片", "恐怖片", "剧情片", "战争片", "国产剧", "港剧", "台剧", "日剧", "韩剧", "欧美剧", "海外剧", "邵氏电影", "理论片", "动画片", "泰剧", "大陆综艺", "港台综艺", "日韩综艺", "欧美综艺", "国产动漫", "日韩动漫", "欧美动漫" ] } 
+ 
 {"key":"A125","name":"A125","type":1,"searchable":1,"quickSearch":1,"api":"https://zy.hls.one/api.php/provide/vod"},
 {"key":"A50","name":"A50","type":1,"searchable":1,"quickSearch":1,"api":"https://cj.vodimg.top/api.php/provide/vod"},
 {"key":"A74","name":"A74","type":1,"searchable":1,"quickSearch":1,"api":"https://nm.xxxc137.top/api.php/provide/vod"},
-{"key":"A106","name":"A106","type":1,"searchable":1,"quickSearch":1,"api":"https://cj.vodimg.top/api.php/provide/vod/&type=2&mid=1"},
+//{"key":"A106","name":"A106","type":1,"searchable":1,"quickSearch":1,"api":"https://cj.vodimg.top/api.php/provide/vod/&type=2&mid=1"},
 {"key":"A15","name":"A15-搜","type":1,"searchable":1,"quickSearch":1,"api":"http://zy.xiaomaomi.cc/api.php/provide/vod"},
 	
 	// {"key":"A120","name":"A120","type":1,"searchable":1,"quickSearch":1,"api":"https://thingproxy.freeboard.io/fetch/https://api.yparse.com/api/json"},
@@ -96,12 +100,13 @@
 	// {"key":"B16","name":"B16","type":0,"searchable":1,"quickSearch":1,"api":"https://thingproxy.freeboard.io/fetch/https://m3u8.apiyhzy.com/api.php/provide/vod/at/xml"},
 	// {"key":"A71","name":"A71","type":1,"searchable":1,"quickSearch":1,"api":"https://thingproxy.freeboard.io/fetch/https://m3u8.apiyhzy.com/api.php/provide/vod"},
 	
-	{"key":"=================","name":"===分割===","type":1,"searchable":1,"quickSearch":1,"api":"http://xxxxxx"},
+{"key":"=================","name":"===分割===","type":1,"searchable":1,"quickSearch":1,"api":"http://xxxxxx"},
 {"key":"A20","name":"A20","type":1,"searchable":1,"quickSearch":1,"api":"https://thingproxy.freeboard.io/fetch/https://api.1080zyku.com/inc/api_mac10_all.php"},
 {"key":"B21","name":"B21","type":0,"searchable":1,"quickSearch":1,"api":"https://thingproxy.freeboard.io/fetch/https://www.hongniuzy2.com/api.php/provide/vod/at/xml"},
-{"key":"B32","name":"B32","type":0,"searchable":1,"quickSearch":1,"api":"https://thingproxy.freeboard.io/fetch/https://api.1080zyku.com/inc/ldg_api.php"},
-{"key":"B35","name":"B35","type":0,"searchable":1,"quickSearch":1,"api":"https://thingproxy.freeboard.io/fetch/https://api.1080zyku.com/inc/api.php"},
+//{"key":"B32","name":"B32","type":0,"searchable":1,"quickSearch":1,"api":"https://thingproxy.freeboard.io/fetch/https://api.1080zyku.com/inc/ldg_api.php"},
+//{"key":"B35","name":"B35","type":0,"searchable":1,"quickSearch":1,"api":"https://thingproxy.freeboard.io/fetch/https://api.1080zyku.com/inc/api.php"},
 {"key":"B15","name":"B15","type":0,"searchable":1,"quickSearch":1,"api":"https://thingproxy.freeboard.io/fetch/https://api.ukuapi.com/api.php/provide/vod/at/xml"},
+{"key":"C01","name":"C01","type":0,"searchable":1,"quickSearch":1,"api":"http://cj.ffzyapi.com/api.php/provide/vod/at/xml/"},
 	//混
 {"key":"A26","name":"A26","type":1,"searchable":1,"quickSearch":1,"api":"https://api.niuniuzy.me/api.php/provide/vod"},
 {"key":"A24","name":"A24","type":1,"searchable":1,"quickSearch":1,"api":"https://api.guangsuapi.com/api.php/provide/vod"},
@@ -160,11 +165,13 @@
 {"key":"B26","name":"B26","type":0,"searchable":1,"quickSearch":1,"api":"https://cj.yayazy.net/api.php/provide/vod/from/yym3u8/at/xml"},
 {"key":"B27","name":"B27","type":0,"searchable":1,"quickSearch":1,"api":"https://api.niuniuzy.me/api.php/provide/vod/from/nnm3u8/at/xml"},
 
-{"key":"B39","name":"B39","type":0,"searchable":1,"quickSearch":1,"api":"https://www.wolongzyw.com/api.php/provide/vod/at/xml"},
-	{"key":"A22","name":"A22","type":1,"searchable":1,"quickSearch":1,"api":"https://thingproxy.freeboard.io/fetch/https://api.apibdzy.com/api.php/provide/vod"},
+{"key":"B39","name":"B39","type":0,"searchable":1,"quickSearch":1,"api":"https://thingproxy.freeboard.io/fetch/https://www.wolongzyw.com/api.php/provide/vod/at/xml"},
+
+{"key":"A22","name":"A22","api":"csp_JsSpider","type": 3,"searchable":1,"quickSearch":1,"ext":"./lib/cr/bzvod.js?url=https://api.apibdzy.com/api.php/provide/vod&defaultProxyIndex=1"},
+
 {"key": "okzyapi","name": "okzyapi","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/bzvod.js?url=https://okzyapi.com/api.php/provide/vod", "searchable": 1,"quickSearch": 1,"changeable": 1},
 
-	{"key":"B18","name":"B18","type":0,"searchable":1,"quickSearch":1,"api":"https://thingproxy.freeboard.io/fetch/https://api.apibdzy.com/api.php/provide/vod/at/xml"},
+{"key":"B18","name":"B18","type":0,"searchable":1,"quickSearch":1,"api":"https://thingproxy.freeboard.io/fetch/https://api.apibdzy.com/api.php/provide/vod/at/xml"},
 {"key":"B17","name":"B17","type":0,"searchable":1,"quickSearch":1,"api":"http://sdzyapi.com/api.php/provide/vod/at/xml"}
 ],
  "parses": [

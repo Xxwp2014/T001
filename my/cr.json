@@ -10,6 +10,28 @@
 // {"key":"A72","name":"A72","type":1,"searchable":1,"quickSearch":1,"api":"https://madoucun.com/api.php/provide/vod/?ac=list"},
 // {"key":"A130","name":"A130","type":1,"searchable":1,"quickSearch":1,"api":"https://fqzy.me//api.php/provide/vod/?ac=list"},
 // {"key":"A110","name":"A110","type":1,"searchable":1,"quickSearch":1,"api":"http://shayuzy1.com/api.php/provide/vod"},
+
+/*0 
+http://fhapi9.com/api.php/provide/vod/
+https://lbapi9.com/api.php/provide/vod/
+
+https://api.maozyapi.com/inc/apijson_vod.php
+https://91md.me/api.php/provide/vod/
+https://www.pgxdy.com/api/json.php
+https://apilj.com/api.php/provide/vod/at/json/
+https://shayuapi.com/api.php/provide/vod/
+
+
+
+https://api.yikanapi.com/api.php/provide/vod/
+https://api.putaozy.net/inc/apijson_vod.php
+
+
+https://api.sexnguon.com/api.php/provide/vod/
+
+
+*/
+
 {"key": "db","name": "db","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/db.js", "searchable": 1,"quickSearch": 1},
 {"key":"vv001","name":"️💃女優💃","type":4,"api":"./lib/cr/00title05151.json","searchable":0,"quickSearch":0,"filterable":0},
 {"key":"vv002","name":"️👠番號👠","type":4,"api":"./lib/cr/00title05152.json","searchable":0,"quickSearch":0,"filterable":0},
@@ -19,9 +41,14 @@
 {"key": "T8x02","name": "8x02","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/8x02.js", "searchable": 1,"quickSearch": 1},
 {"key": "T8x01","name": "8x01","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/8x01.js", "searchable": 1,"quickSearch": 1},
 {"key": "HC","name": "HC","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/hc.js", "searchable": 1,"quickSearch": 1},
+{"key": "SMM","name": "SMM","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/smm.js", "searchable": 0,"quickSearch": 0},
 {"key": "5g","name": "5G","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/5g.js", "searchable": 1,"quickSearch": 1},
 {"key": "nowav_JS","name": "nowavJS","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/nowav.js", "searchable": 1,"quickSearch": 1},
 {"key": "avone","name": "avone","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/avone.js", "searchable": 1,"quickSearch": 1,"changeable": 1},
+{"key": "ZGL","name": "朱古力","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/zgl.js", "searchable": 1,"quickSearch": 1},
+{"key": "hdys","name": "hdys","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/hdys.js", "searchable": 1,"quickSearch": 1,"changeable": 1},
+{"key": "db","name": "db","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/db.js", "searchable": 1,"quickSearch": 1,"changeable": 1},
+{"key": "VODB","name": "VODB","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/VODB.js", "searchable": 1,"quickSearch": 1,"changeable": 1},
 
 {"key": "老色逼资源","name": "老色逼资源","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/bzvod.js?url=https://apilsbzy1.com/api.php/provide/vod&db=1", "searchable": 1,"quickSearch": 1},
 {"key": "葡萄资源","name": "葡萄资源","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/bzvod.js?url=https://caiji.putaozyw.net/inc/apijson_vod.php&db=1", "searchable": 1,"quickSearch": 1},

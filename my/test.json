@@ -7,7 +7,14 @@
 	{"key": "nowav_JS","name": "nowavJS","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/nowav.js", "searchable": 1,"quickSearch": 1,"changeable": 1},
 	
 {"key": "db","name": "db","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/db.js", "searchable": 1,"quickSearch": 1,"changeable": 1},
+{"key": "VODB","name": "VODB","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/VODB.js", "searchable": 1,"quickSearch": 1,"changeable": 1},
+{"key": "avone","name": "avone","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/avone.js", "searchable": 1,"quickSearch": 1,"changeable": 1},
+{"key": "hdys","name": "hdys","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/hdys.js", "searchable": 1,"quickSearch": 1,"changeable": 1},
 
+{"key":"C01","name":"C01","type":0,"searchable":1,"quickSearch":1,"api":"http://cj.ffzyapi.com/api.php/provide/vod/at/xml/"},
+
+{"key": "ZGL","name": "朱古力","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/zgl.js", "searchable": 1,"quickSearch": 1},
+{"key": "SMM","name": "SMM","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/smm.js", "searchable": 0,"quickSearch": 0},
 // {"key": "semaozy","name": "semaozy","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/bzvod.js?url=https://caiji.semaozy.net/inc/apijson_vod.php/", "searchable": 1,"quickSearch": 1,"changeable": 1},
  {"key": "semaozy","name": "semaozy","api":"csp_JsSpider","type": 3, "ext": "./lib/cr/bzvod.js?url=https://suoniapi.com/api.php/provide/vod&db=1", "searchable": 1,"quickSearch": 1,"changeable": 1}
 
