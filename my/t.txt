@@ -74,7 +74,7 @@
                       <span><i class="fa fa-ghost fa-lg" aria-hidden="true"></i>&nbsp; AI 模型</span>
                       <select class="form-control ipt-common" id="model">
 						<option value="qwen-qwen2-72b-instruct">千问V2-72b</option>
-						<option value="qwen-qwen1-5-110b-chat-demo?fn_index=0">千问V1.5-110b</option>
+						<option value="zai-org-glm-4-5-space">GLM-4.5</option>
 						<option value="ReffidGPT">ReffidGPT</option>
 <!-- 						<option value="fast-gpt">FastGPT</option>
 						<option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
@@ -403,6 +403,26 @@ $(document).ready(function() {
 									  }
 								  }
 				}
+			}if(selModel.val().startsWith("zai-org")){
+			  var resArr1=jsonObj.output.data[0];
+			  if(resArr1&&resArr1.length>0){
+				  var resArr=resArr1[resArr1.length-1];
+				  if(resArr&&resArr.length>0){
+					  if(jsonObj.msg=="process_completed"){
+							var tmpStr=resArr[resArr.length-1];
+							if(tmpStr.length>=str.length){
+								addResponseMessage(tmpStr);
+								resFlag = true;
+								try{reader.cancel();}catch(e){}
+								return tmpStr;
+							}
+					  }else{
+						  str+=resArr[resArr.length-1];
+						  addResponseMessage(str);
+						  resFlag = true;
+					  }
+				  }
+			  }
 			}
         }else if (jsonObj.msg &&jsonObj.msg=="heartbeat" ){
 			heartBeatCnt++;
