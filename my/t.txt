@@ -70,6 +70,10 @@
                       <span><i class="fa fa-key fa-lg" aria-hidden="true"></i>&nbsp; Api Key</span>
                       <input type="text" class="form-control ipt-common api-key" placeholder="可用自己的api key">
                     </div>
+					<div class="settings-common">
+                      <span><i class="fa fa-key fa-lg" aria-hidden="true"></i>&nbsp; Temperature</span>
+                      <input type="text" class="form-control ipt-common temperature" value=1>
+                    </div>
                     <div class="settings-common">
                       <span><i class="fa fa-ghost fa-lg" aria-hidden="true"></i>&nbsp; AI 模型</span>
                       <select class="form-control ipt-common" id="model">
@@ -316,7 +320,7 @@ $(document).ready(function() {
         "messages": systemMsg.concat( data.prompts),
         "model": selModel.val(),
         "max_tokens": 1025,
-        "temperature": 0.5,
+        "temperature": temperature||1,
         "top_p": 1,
         "n": 1,
         "stream": true,
@@ -616,6 +620,17 @@ $(document).ready(function() {
   if (apiKey) {
     $(".settings-common .api-key").val(apiKey);
   }
+  
+    // apiKey
+  let temperature = localStorage.getItem('temperature');
+  if (temperature) {
+    $(".settings-common .temperature").val(temperature);
+  }
+  try{
+	temperature=temperature*1;
+  }catch(e){
+	temperature=1;
+  }
 
   // apiKey输入框事件
   $(".settings-common .api-key").blur(function() { 
@@ -624,6 +639,16 @@ $(document).ready(function() {
       localStorage.setItem('apiKey', apiKey);
     }else{
       localStorage.removeItem('apiKey');
+    }
+  })
+  
+    // apiKey输入框事件
+  $(".settings-common .temperature").blur(function() { 
+    temperature = $(this).val();
+    if(temperature.length!=0){
+      localStorage.setItem('temperature', temperature);
+    }else{
+      localStorage.removeItem('temperature');
     }
   })
 
