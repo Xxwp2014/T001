@@ -122,6 +122,15 @@
                         </label>
                       </div>
                     </div>
+					 <div class="settings-common">
+                      <span><i class="fa fa-retweet fa-lg" aria-hidden="true"></i>&nbsp; 启用思考模式</span>
+                      <div class="chck-btn">
+                        <input id="chck-think" type="checkbox">
+                        <label for="chck-think" class="check-trail">
+                        <div class="check-handler"></div>
+                        </label>
+                      </div>
+                    </div>
                     <div class="settings-common">                      
 					  <span><i class="fa fa-key fa-lg" aria-hidden="true"></i>&nbsp; 角色设定</span>
                      <span> <select class="form-control ipt-common" id="selRole">
@@ -320,10 +329,11 @@ $(document).ready(function() {
         "messages": systemMsg.concat( data.prompts),
         "model": selModel.val(),
         "max_tokens": 1025,
-        "temperature": temperature||1,
+        "temperature": (temperature||1)*1,
         "top_p": 1,
         "n": 1,
         "stream": true,
+		"think":(think||0)*1,
 		'session_hash': localStorage.getItem("session_hash")
       })
     }); 
@@ -720,6 +730,33 @@ $(document).ready(function() {
       localStorage.setItem('continuousDialogue', false);
     }
   });
+  
+    // 是否连续对话
+  var think = localStorage.getItem('think');
+
+  // think
+  if(think == null){
+    think = 0;
+    localStorage.setItem('think', think);
+  }
+  
+  if(think == "1"||think == 1){
+    $("#chck-think").prop("checked", true);
+  }else{
+    $("#chck-think").prop("checked", false);
+  }
+
+  $('#chck-think').click(function() {
+    if ($(this).prop('checked')) {
+      localStorage.setItem('think', 1);
+	  think=1;
+    } else {
+      localStorage.setItem('think', 0);
+	  think=0;
+    }
+  });
+  
+  
 
   // 删除功能
   $(".delete a").click(function(){
@@ -831,6 +868,7 @@ $(document).ready(function() {
   		 console.log("xxx",event,this)
   		 $("#role").val(this.value);
   		 localStorage.setItem("roletext",this.value);
+		 initSessionHash();
   })
   if(typeof getRoles==="function"){
 	  var roles=getRoles();
