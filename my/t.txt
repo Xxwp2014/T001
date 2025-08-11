@@ -417,7 +417,7 @@ $(document).ready(function() {
 								return tmpStr;
 							}
 					  }else{
-						  str+=resArr[resArr.length-1];
+						  str=resArr[resArr.length-1];
 						  addResponseMessage(str);
 						  resFlag = true;
 					  }
